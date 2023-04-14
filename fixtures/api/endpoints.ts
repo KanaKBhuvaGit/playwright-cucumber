@@ -1,0 +1,5 @@
+export const ED__GET_POST = "/posts/1"
+export const ED__GET_ALL_POST = "/posts"
+export const ED__CREATE_POST = "/posts"
+export const ED__UPDATE_POST = "/posts/1"
+export const ED__DELETE__POST = "/posts/1"
