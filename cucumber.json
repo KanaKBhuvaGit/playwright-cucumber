@@ -4,12 +4,12 @@
             "snippetInterface": "async-await"
         },
         "paths": [
-            "src/test/features/"
+            "src/bdd-cucumber-test/features/todo.feature"
         ],
         "publishQuiet": true,
         "dryRun": false,
         "require": [
-            "src/test/steps/*.ts",
+            "src/bdd-cucumber-test/steps/*.ts",
             "src/hooks/hooks.ts"
         ],
         "requireModule": [
@@ -29,7 +29,7 @@
         "publishQuiet": true,
         "dryRun": false,
         "require": [
-            "src/test/steps/*.ts",
+            "src/bdd-cucumber-test/steps/*.ts",
             "src/hooks/hooks.ts"
         ],
         "requireModule": [
