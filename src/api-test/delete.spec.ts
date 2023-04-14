@@ -6,6 +6,6 @@ import { STATUS__404 } from "../../fixtures/api/statuses";
 test("Delete the first post", async ({ request, baseURL }) => {
     const _response = await request.delete(`${baseURL}/${ED__DELETE__POST}`);
 
-    console.log(await _response.json());
+    // console.log(await _response.json());
     expect(_response.status()).toBe(STATUS__404);
 })

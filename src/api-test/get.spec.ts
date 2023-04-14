@@ -7,7 +7,7 @@ test("Get the first post", async ({ request, baseURL }) => {
 
     expect(_response.status()).toBe(STATUS__200);
     const res = await _response.json();
-    console.log(res)
+    // console.log(res)
 })
 
 test("Get all post", async ({ request, baseURL }) => {
@@ -15,5 +15,5 @@ test("Get all post", async ({ request, baseURL }) => {
 
     expect(_response.status()).toBe(STATUS__200);
     const res = await _response.json();
-    console.log(res)
+    // console.log(res)
 })

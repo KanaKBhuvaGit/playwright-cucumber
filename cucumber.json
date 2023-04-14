@@ -4,7 +4,7 @@
             "snippetInterface": "async-await"
         },
         "paths": [
-            "src/bdd-cucumber-test/features/todo.feature"
+            "src/bdd-cucumber-test/features/"
         ],
         "publishQuiet": true,
         "dryRun": false,

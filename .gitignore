@@ -8,3 +8,5 @@ cucumber-report.html
 assets
 @rerun.txt
 index.html
+/allure-results/
+/allure-report/

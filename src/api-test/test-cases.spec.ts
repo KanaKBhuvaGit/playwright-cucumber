@@ -15,7 +15,7 @@ test("Create a post", async ({ request, baseURL }) => {
     expect(_response.status()).toBe(STATUS__201);
     expect(_response.ok()).toBeTruthy();
     const res = await _response.json();
-    console.log(res);
+    // console.log(res);
 })
 
 test("Get the post", async ({ request, baseURL }) => {
@@ -23,7 +23,7 @@ test("Get the post", async ({ request, baseURL }) => {
 
     expect(_response.status()).toBe(STATUS__200);
     const res = await _response.json();
-    console.log(res)
+    // console.log(res)
 })
 
 test("Upadate the title of the post", async ({ request, baseURL }) => {
@@ -31,7 +31,7 @@ test("Upadate the title of the post", async ({ request, baseURL }) => {
         data: DATA__UPDATE_TITLE,
         headers: HEADER__CONTENT_TYPE
     });
-    console.log(await _response.json());
+    // console.log(await _response.json());
     expect(_response.status()).toBe(STATUS__200);
     expect(_response.ok()).toBeTruthy();
 })
@@ -41,7 +41,7 @@ test("Update the post", async ({ request, baseURL }) => {
         data: DATA__UPDATE_POST,
         headers: HEADER__CONTENT_TYPE
     });
-    console.log(await _response.json());
+    // console.log(await _response.json());
     expect(_response.status()).toBe(STATUS__200);
     expect(_response.ok()).toBeTruthy();
 })
@@ -49,6 +49,6 @@ test("Update the post", async ({ request, baseURL }) => {
 test("Delete the post", async ({ request, baseURL }) => {
     const _response = await request.delete(`${baseURL}/${END_POINT}${POST_NUMBER}`);
 
-    console.log(await _response.json());
+    // console.log(await _response.json());
     expect(_response.status()).toBe(STATUS__404);
 })

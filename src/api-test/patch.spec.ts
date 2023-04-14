@@ -10,7 +10,7 @@ test("Upadate the title of the post", async ({ request, baseURL }) => {
         data: DATA__UPDATE_TITLE,
         headers: HEADER__CONTENT_TYPE
     });
-    console.log(await _response.json());
+    // console.log(await _response.json());
     expect(_response.status()).toBe(STATUS__200);
     expect(_response.ok()).toBeTruthy();
 })

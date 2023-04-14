@@ -29,7 +29,7 @@ Then('Login should be success and the message displayed on the page should be {s
     const successMesssage = await fixture.page.locator("//p[@class='has-text-align-center']");
     await expect(successMesssage).toBeVisible();
     fixture.logger.info("Login success message: " + message);
-    expect(successMesssage.textContent()).toEqual(message)
+    expect((await successMesssage.textContent()).toString()).toEqual(message)
 })
 
 When('Login should fail and the message displayed on the page should be {string}', async function (message) {

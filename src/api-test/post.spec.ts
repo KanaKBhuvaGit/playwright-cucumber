@@ -14,5 +14,5 @@ test("Create a post", async ({ request, baseURL }) => {
     expect(_response.status()).toBe(STATUS__201);
     expect(_response.ok()).toBeTruthy();
     const res = await _response.json();
-    console.log(res);
+    // console.log(res);
 })
