@@ -3,3 +3,5 @@ export const TODO_ITEMS = [
     'feed the cat',
     'book a doctors appointment'
   ];
+
+export const TODO_ITEM_EDIT = 'buy some sausages'
