@@ -13,18 +13,19 @@
     "test:failed": "cucumber-js -p rerun @rerun.txt",
     "test:api": "npx playwright test src/api-test",
     "test:ui": "npx playwright test src/default-ui-test",
-    "test:pom": "npx playwright test src/page-object-model"
+    "test:pom": "npx playwright test src/page-object-model",
+    "test:report": "npx playwright show-report"
   },
   "keywords": [
     "cucumber",
     "cucumber - TS",
     "playwright-cucumber"
   ],
-  "author": "Koushik @LetCode with Koushik",
+  "author": "Kanak",
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^9.0.1",
-    "@playwright/test": "^1.32.3",
+    "@playwright/test": "^1.40.1",
     "allure-commandline": "^2.21.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
