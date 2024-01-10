@@ -1,0 +1,33 @@
+image: mcr.microsoft.com/playwright:v1.40.0-jammy
+
+pipelines:
+  branches:
+    main:
+      - step:
+          caches:
+            - node
+          script:
+            # install dependencies
+            - npm ci
+            - npx playwright install --with-deps
+            - npm test
+          artifacts:
+            # store reports as artifacts
+            - test-results/**
+            - allure-report/**
+            - allure-results/**
+  pull-requests:
+    test:
+      - step:
+          caches:
+            - node
+          script:
+            # install dependencies
+            - npm ci
+            - npx playwright install --with-deps
+            - npm test
+          artifacts:
+            # store reports as artifacts
+            - test-results/**
+            - allure-report/**
+            - allure-results/**
