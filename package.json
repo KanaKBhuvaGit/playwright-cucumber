@@ -1,10 +1,10 @@
 {
-  "name": "play-ts-cucumber",
+  "name": "demo-playwright-ts-cucumber-pom-api",
   "version": "1.0.0",
-  "description": "Playwright Cucumber TS framework - The easiest way to learn",
+  "description": "Playwright Cucumber TS framework",
   "main": "index.js",
   "scripts": {
-    "allure:generate": "npx allure generate ./allure-results --clean",
+    "allure:generate": "npx allure generate ./allure-results -o allure-report --clean",
     "allure:open": "npx allure open ./allure-report",
     "allure:serve": "npx allure serve",
     "allure:clean": "rm -r ./allure-report ./allure-results || true",
@@ -29,13 +29,13 @@
     "@cucumber/cucumber": "^9.0.1",
     "@playwright/test": "^1.40.1",
     "allure-commandline": "^2.21.0",
+    "allure-playwright": "^2.10.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
-    "experimental-allure-playwright": "^0.0.3",
     "fs-extra": "^11.1.1",
     "multiple-cucumber-html-reporter": "^3.3.0",
-    "playwright": "^1.32.3",
+    "playwright": "^1.40.1",
     "ts-node": "^10.9.1",
-    "winston": "^3.8.2"
+    "winston": "^3.11.0"
   }
 }
