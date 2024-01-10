@@ -7,6 +7,7 @@
     "allure:generate": "npx allure generate ./allure-results --clean",
     "allure:open": "npx allure open ./allure-report",
     "allure:serve": "npx allure serve",
+    "allure:clean": "rm -r ./allure-report ./allure-results || true",
     "pretest": "npx ts-node src/helper/init.ts",
     "test": "cross-env ENV=prod cucumber-js test || true",
     "posttest": "npx ts-node src/helper/report.ts",
@@ -14,7 +15,8 @@
     "test:api": "npx playwright test src/api-test",
     "test:ui": "npx playwright test src/default-ui-test",
     "test:pom": "npx playwright test src/page-object-model",
-    "test:report": "npx playwright show-report"
+    "test:report": "npx playwright show-report",
+    "test:report:clean": "rm -r ./playwright-report ./test-results || true"
   },
   "keywords": [
     "cucumber",
