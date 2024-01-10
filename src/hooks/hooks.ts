@@ -16,7 +16,7 @@ BeforeAll(async function () {
 });
 
 Before(async function ({ pickle }) {
-    const scenarioName = "Name: " + pickle.name + " id: " + pickle.id
+    const scenarioName = "Name - " + pickle.name + " id - " + pickle.id
     context = await browser.newContext({
         recordVideo: {
             dir: "test-results/videos",
@@ -29,7 +29,7 @@ Before(async function ({ pickle }) {
 });
 
 After(async function ({ pickle, result }) {
-    const scenarioName = "Name: " + pickle.name + " id: " + pickle.id
+    const scenarioName = "Name - " + pickle.name + " id - " + pickle.id
     let videoPath: string;
     let img: Buffer;
     if (result?.status == Status.FAILED) {
