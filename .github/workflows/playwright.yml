@@ -19,10 +19,10 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Cucumber tests
       run: npm test
-    - uses: actions/upload-artifact@v4.0.0
-      if: always()
+    - name: Artifacts - Reports
+      uses: actions/upload-artifact@v4.0.0
       with:
         name: Report
-        path: ./test-results
-        if-no-files-found: warn
+        path: test-results/**
+        if-no-files-found: ignore
         retention-days: 2
