@@ -16,17 +16,16 @@ phases:
       nodejs: latest
     commands:
       - npm ci
-      - npx playwright install --with-deps
+      - npm run playwright:install
   pre_build:
     commands:
       - npm run playwright:version
   build:
     commands:
-      - npm run test:ui
+      - npm run test
 artifacts:
   files:
-    - allure-report/**
-    - allure-results/**
+    - test-results/**
   discard-paths: yes
 cache:
   paths:
