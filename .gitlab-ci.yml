@@ -1,0 +1,13 @@
+e2eTests:
+  image: mcr.microsoft.com/playwright:v1.40.0-jammy    
+  stage: test
+  script:
+    - npm ci
+    - npx playwright install --with-deps
+    - npm run test:ui
+    - npm test
+  artifacts:
+    when: always
+    paths:
+      - test-results/**
+    expire_in: 1 day
