@@ -1,0 +1,33 @@
+## buildspec.yml
+version: 0.2
+
+## AWS CodeBuild Batch configuration
+## https://docs.aws.amazon.com/codebuild/latest/userguide/batch-build-buildspec.html
+batch:
+  fast-fail: false
+  build-list:
+    - identifier: playwright-e2e-tests
+      env:
+        image: mcr.microsoft.com/playwright:v1.40.0-jammy
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - npm ci
+      - npx playwright install --with-deps
+  pre_build:
+    commands:
+      - npm run playwright:version
+  build:
+    commands:
+      - npm run test:ui
+artifacts:
+  files:
+    - allure-report/**
+    - allure-results/**
+  discard-paths: yes
+cache:
+  paths:
+    - node_modules/**

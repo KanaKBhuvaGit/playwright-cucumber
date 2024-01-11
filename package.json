@@ -16,7 +16,8 @@
     "test:ui": "npx playwright test src/default-ui-test",
     "test:pom": "npx playwright test src/page-object-model",
     "test:report": "npx playwright show-report",
-    "test:report:clean": "rm -r ./playwright-report ./test-results || true"
+    "test:report:clean": "rm -r ./playwright-report ./test-results || true",
+    "playwright:version": "npx playwright --version"
   },
   "keywords": [
     "cucumber",
