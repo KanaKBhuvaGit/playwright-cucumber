@@ -22,10 +22,10 @@ phases:
       - npm run playwright:version
   build:
     commands:
-      - npm run test
+      - npm run test:ui
 artifacts:
   files:
-    - test-results/**
+    - allure-results/**
   discard-paths: yes
 cache:
   paths:
